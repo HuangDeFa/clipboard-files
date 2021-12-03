@@ -18,6 +18,8 @@ namespace clipboard
 	using v8::NewStringType;
 	using v8::Value;
 
+	#ifndef __LINUX__
+
 	void readFiles(const FunctionCallbackInfo<Value> &args)
 	{
 		Isolate *isolate = args.GetIsolate();
@@ -39,6 +41,15 @@ namespace clipboard
 		NODE_SET_METHOD(exports, "readFiles", readFiles);
 		NODE_SET_METHOD(exports, "writeFiles", writeFiles);
 	}
+
+	#else
+
+	void Init(Local<Object> exports)
+	{
+		// noop
+	}
+
+	#endif
 
 	NODE_MODULE(NODE_GYP_MODULE_NAME, Init)
 }

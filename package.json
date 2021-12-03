@@ -11,7 +11,7 @@
 		"module_name": "binding",
 		"module_path": "./lib/binding/{node_abi}-{platform}-{arch}/",
 		"package_name": "{node_abi}-{platform}-{arch}.tar.gz",
-		"host": "https://github.com/alex8088/clipboard-files/releases/download/",
+		"host": "https://github.com/HuangDeFa/clipboard-files/releases/download/",
 		"remote_path": "v{version}"
 	},
 	"keywords": [
@@ -22,7 +22,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/alex8088/clipboard-files.git"
+		"url": "https://github.com/HuangDeFa/clipboard-files.git"
 	},
 	"scripts": {
 		"test": "node ./test",
@@ -32,7 +32,7 @@
 	"license": "MIT",
 	"gypfile": true,
 	"dependencies": {
-		"nan": "^2.13.2",
-		"node-pre-gyp": "^0.12.0"
+		"@mapbox/node-pre-gyp": "^1.0.7",
+		"nan": "^2.13.2"
 	}
 }
